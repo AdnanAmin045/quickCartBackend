@@ -85,7 +85,6 @@ router.delete("/deleteProduct", async (req, res) => {
 router.post("/updateProduct", async (req, res) => {
     const product = req.body;
     console.log("Incoming Product:", product);
-
     try {
         const productId = new mongoose.Types.ObjectId(product._id);
         delete product._id;

@@ -104,8 +104,6 @@ router.patch("/update", async (req, res) => {
     const productIdObject = new mongoose.Types.ObjectId(productId);
     let newQuantity = quantity;
 
-    console.log(productId,quantity,userId)
-
     if (flag === 0) {
         newQuantity--;
     } else if (flag === 1) {

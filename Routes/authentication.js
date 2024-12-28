@@ -53,6 +53,7 @@ router.get("/signUp", async (req, res) => {
 
 router.post("/logIn", async (req, res) => {
     const { email, password } = req.body;
+    console.log("Hello")
     try {
         const data = await userModel.findOne({ email: email });
         if (data) {

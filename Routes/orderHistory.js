@@ -328,7 +328,8 @@ router.get("/totalSales", async (req, res) => {
     const result = await orderHistoryModel.aggregate([
       {
         $match: {
-          deliveryStatus: 3,  // Filtering only records where deliveryStatus is 3
+          deliveryStatus: 3,
+          paymentStatus:"Success"  // Filtering only records where deliveryStatus is 3
         },
       },
       {

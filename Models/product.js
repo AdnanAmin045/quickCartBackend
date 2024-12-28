@@ -14,6 +14,7 @@ const productItemsSchema = new mongoose.Schema({
     productPrice: { type: Number, required: true },
     productCost: { type: Number, required: true },
     discount: { type: Number, required: true },
+    flatOfferDiscount: { type: Number, required: true },
     category: { type: String, required: true },
     tags: { type: [String], required: true },
     productquantity: { type: Number, required: true },
